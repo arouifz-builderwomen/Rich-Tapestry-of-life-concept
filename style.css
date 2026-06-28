@@ -814,3 +814,20 @@ margin:auto;
 }
 
 }
+.founder-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:3rem;
+    font-weight:500;
+    color:#222;
+    margin-top:25px;
+    margin-bottom:8px;
+}
+
+.founder-title{
+    font-family:'Manrope',sans-serif;
+    font-size:.75rem;
+    text-transform:uppercase;
+    letter-spacing:6px;
+    color:#A7865E;
+    margin-bottom:40px;
+}
