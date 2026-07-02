@@ -983,3 +983,255 @@ margin:auto;
     color:#A7865E;
     margin-bottom:40px;
 }
+/* ========================================================= */
+/* CINEMATIC HERO */
+/* ========================================================= */
+
+@keyframes heroZoom{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        transform:scale(1.12);
+
+    }
+
+}
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes heroTitle{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        translateY(120px)
+        scale(1.15);
+
+        filter:blur(14px);
+
+    }
+
+    40%{
+
+        opacity:.3;
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+        filter:blur(0);
+
+    }
+
+}
+
+@keyframes heroQuote{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        translateY(70px);
+
+        filter:blur(8px);
+
+    }
+
+    35%{
+
+        opacity:0;
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:none;
+
+        filter:none;
+
+    }
+
+}
+
+@keyframes heroButton{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    55%{
+
+        opacity:0;
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+/* ========================================================= */
+/* PARALLAX FEEL */
+/* ========================================================= */
+
+.hero{
+
+    perspective:1200px;
+
+}
+
+.hero-content{
+
+    transform-style:preserve-3d;
+
+}
+
+.hero h1{
+
+    transform:translateZ(80px);
+
+}
+
+.hero-quote{
+
+    transform:translateZ(40px);
+
+}
+
+.button{
+
+    transform:translateZ(20px);
+
+}
+
+/* ========================================================= */
+/* CHAPTER IMAGE */
+/* ========================================================= */
+
+.chapter-image,
+.intro img{
+
+    transition:
+    transform 8s ease,
+    filter .6s ease;
+
+}
+
+.chapter-image:hover,
+.intro img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/* ========================================================= */
+/* PREMIUM SPACING */
+/* ========================================================= */
+
+.hero h1{
+
+    margin-bottom:50px;
+
+}
+
+.hero-quote{
+
+    margin-bottom:15px;
+
+}
+
+.hero-author{
+
+    margin-bottom:70px;
+
+}
+
+.intro p{
+
+    max-width:680px;
+
+}
+
+.intro h2{
+
+    max-width:760px;
+
+}
+
+/* ========================================================= */
+/* MOBILE */
+/* ========================================================= */
+
+@media(max-width:900px){
+
+.hero h1{
+
+    font-size:4rem;
+
+}
+
+.hero-quote{
+
+    font-size:1.5rem;
+
+}
+
+.intro{
+
+    padding:120px 0;
+
+}
+
+.intro h2{
+
+    font-size:3rem;
+
+}
+
+.intro img{
+
+    height:55vh;
+
+}
+
+}
