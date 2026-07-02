@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');:root{
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap');
+:root{
     --sand:#F8F5F0;
     --cream:#FCFAF6;
     --stone:#E8DFD0;
@@ -24,27 +25,25 @@ body{
     line-height:1.8;
 }
 /* ---------------- HERO ---------------- */
-..hero{
+.hero{
     position:relative;
-    height:72vh;
-    min-height:620px;
+    height:100vh;
     overflow:hidden;
 }
-.hero-image{
+.hero-video{
     position:absolute;
     inset:0;
     width:100%;
     height:100%;
     object-fit:cover;
-    object-position:center center;
 }
 .overlay{
     position:absolute;
     inset:0;
     background:
     linear-gradient(
-        rgba(0,0,0,.12),
-        rgba(0,0,0,.45)
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.55)
     );
 }
 .hero-content{
