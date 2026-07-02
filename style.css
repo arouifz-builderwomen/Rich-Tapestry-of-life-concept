@@ -1,528 +1,255 @@
-/* ========================================================= */
-/* RESET */
-/* ========================================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap');
 :root{
-
-    --cream:#F8F6F2;
-    --text:#1d1d1d;
-    --gold:#A88C63;
-    --white:#ffffff;
-
+    --sand:#F8F5F0;
+    --cream:#FCFAF6;
+    --stone:#E8DFD0;
+    --bronze:#A7865E;
+    --gold:#C8A977;
+    --olive:#6D7557;
+    --charcoal:#222222;
+    --dark:#151515;
 }
-
 *{
-
     margin:0;
     padding:0;
     box-sizing:border-box;
-
 }
-
 html{
-
     scroll-behavior:smooth;
-
 }
-
 body{
-
-    background:var(--cream);
-
-    color:var(--text);
-
-    font-family:'Inter',sans-serif;
-
+    font-family:'Manrope',sans-serif;
+    background:var(--sand);
+    color:var(--charcoal);
     overflow-x:hidden;
-
+    line-height:1.8;
 }
-
-img{
-
-    display:block;
-    width:100%;
-
-}
-
-a{
-
-    text-decoration:none;
-
-}
-
-/* ========================================================= */
-/* HERO */
-/* ========================================================= */
-
+/* ---------------- HERO ---------------- */
 .hero{
-
     position:relative;
-
     height:100vh;
-
     overflow:hidden;
-
 }
-
-.hero-image{
-
+.hero-video{
     position:absolute;
-
     inset:0;
-
     width:100%;
-
     height:100%;
-
     object-fit:cover;
-
-    object-position:center center;
-
-    transform:scale(1);
-
-    animation:heroZoom 22s ease forwards;
-
 }
-
-.hero-overlay{
-
+.overlay{
     position:absolute;
-
     inset:0;
-
-    background:linear-gradient(
-
-        to bottom,
-
-        rgba(0,0,0,.08),
-
-        rgba(0,0,0,.22),
-
-        rgba(0,0,0,.42)
-
+    background:
+    linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.55)
     );
-
 }
-
 .hero-content{
-
-    position:absolute;
-
-    right:8%;
-
-    top:16%;
-
-    width:620px;
-
+    position:relative;
     z-index:5;
-
+    height:100%;
+    max-width:1400px;
+    margin:auto;
     display:flex;
-
     flex-direction:column;
-
-    align-items:flex-end;
-
-    text-align:right;
-
+    justify-content:center;
+    padding:0 10%;
 }
-
-/* ========================================================= */
-/* HERO TYPOGRAPHY */
-/* ========================================================= */
-
-.hero-kicker{
-
-    color:white;
-
-    letter-spacing:8px;
-
+.eyebrow{
+    color:rgba(255,255,255,.9);
     text-transform:uppercase;
-
-    font-size:.70rem;
-
-    margin-bottom:45px;
-
-    opacity:.9;
-
+    letter-spacing:8px;
+    font-size:.75rem;
+    margin-bottom:30px;
 }
-
 .hero h1{
-
     font-family:'Cormorant Garamond',serif;
-
-    font-weight:300;
-
-    font-size:clamp(5.5rem,9vw,8.5rem);
-
+    color:white;
+    font-size:clamp(5rem,10vw,9rem);
     line-height:.88;
-
-    color:white;
-
-    margin-bottom:35px;
-
-    text-shadow:0 15px 45px rgba(0,0,0,.25);
-
+    font-weight:400;
+    margin-bottom:25px;
 }
-
-.hero-intro{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:2rem;
-
-    line-height:1.45;
-
+.subtitle{
     color:white;
-
-    max-width:470px;
-
-    margin-bottom:60px;
-
+    font-size:1.3rem;
+    max-width:600px;
+    margin-bottom:40px;
+    font-weight:300;
 }
-
-.hero-quote{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-style:italic;
-
-    font-size:1.7rem;
-
-    line-height:1.7;
-
+.hero-button{
+    display:inline-block;
+    width:fit-content;
+    text-decoration:none;
     color:white;
-
-    max-width:420px;
-
-    margin-bottom:15px;
-
-}
-
-.hero-author{
-
-    color:rgba(255,255,255,.75);
-
-    font-size:.72rem;
-
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-
-    margin-bottom:60px;
-
-}
-
-.hero-link{
-
-    color:white;
-
-    text-transform:uppercase;
-
-    letter-spacing:5px;
-
-    font-size:.72rem;
-
-    border-bottom:1px solid rgba(255,255,255,.45);
-
-    padding-bottom:14px;
-
+    border:1px solid rgba(255,255,255,.5);
+    padding:18px 38px;
+    border-radius:100px;
+    backdrop-filter:blur(10px);
     transition:.4s;
-
 }
-
-.hero-link:hover{
-
-    letter-spacing:7px;
-
-}
-
-/* ========================================================= */
-/* OPENING IMAGE */
-/* ========================================================= */
-
-.opening-image{
-
-    height:100vh;
-
-    overflow:hidden;
-
-}
-
-.opening-image img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-}
-
-/* ========================================================= */
-/* EDITORIAL */
-/* ========================================================= */
-
-.editorial{
-
-    background:#FCFBF8;
-
-    padding:180px 0;
-
-}
-
-.editorial-container{
-
-    width:min(760px,90%);
-
-    margin:auto;
-
-}
-
-.editorial span{
-
-    display:block;
-
-    color:var(--gold);
-
-    text-transform:uppercase;
-
-    letter-spacing:7px;
-
-    font-size:.72rem;
-
-    margin-bottom:45px;
-
-}
-
-.editorial h2{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:clamp(3.5rem,6vw,6rem);
-
-    line-height:.95;
-
-    font-weight:300;
-
-    margin-bottom:60px;
-
-}
-
-.editorial .lead{
-
-    font-size:1.35rem;
-
-    line-height:2;
-
-    margin-bottom:45px;
-
-    color:#444;
-
-}
-
-.editorial p{
-
-    font-size:1.08rem;
-
-    line-height:2.1;
-
-    color:#666;
-
-    margin-bottom:35px;
-
-}
-
-/* ========================================================= */
-/* FULLSCREEN IMAGE */
-/* ========================================================= */
-
-.fullscreen-image{
-
-    height:100vh;
-
-}
-
-.fullscreen-image img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-}
-
-/* ========================================================= */
-/* ANIMATION */
-/* ========================================================= */
-
-@keyframes heroZoom{
-
-    from{
-
-        transform:scale(1);
-
-    }
-
-    to{
-
-        transform:scale(1.10);
-
-    }
-
-}
-
-/* ========================================================= */
-/* MOBILE */
-/* ========================================================= */
-
-@media(max-width:900px){
-
-.hero-content{
-
-    left:8%;
-
-    right:8%;
-
-    width:auto;
-
-    top:14%;
-
-    align-items:flex-start;
-
-    text-align:left;
-
-}
-
-.hero h1{
-
-    font-size:4.5rem;
-
-}
-
-.hero-intro{
-
-    font-size:1.6rem;
-
-}
-
-.hero-quote{
-
-    font-size:1.4rem;
-
-}
-
-.editorial{
-
-    padding:110px 0;
-
-}
-
-.editorial h2{
-
-    font-size:3rem;
-
-}
-
-}
-/* ========================================================= */
-/* EDITORIAL CHAPTERS */
-/* ========================================================= */
-
-.editorial{
-
-    position:relative;
-
-    padding:16rem 0;
-
-    background:#fbfaf7;
-
-}
-
-.editorial.large{
-
-    padding:20rem 0;
-
-}
-
-.editorial.alternate{
-
+.hero-button:hover{
     background:white;
-
+    color:black;
 }
-
-.editorial-container{
-
-    width:min(760px,88%);
-
+/* ---------------- GENERAL ---------------- */
+.editorial-section{
+    padding:160px 10%;
+    background:var(--sand);
+}
+.light{
+    background:var(--cream);
+}
+.dark{
+    background:var(--dark);
+    color:white;
+}
+.editorial-content{
+    max-width:900px;
     margin:auto;
-
-    position:relative;
-
-    z-index:2;
-
 }
-
-.editorial span{
-
+.section-label{
     display:block;
-
-    margin-bottom:2.5rem;
-
-    font-size:.72rem;
-
-    letter-spacing:8px;
-
+    color:var(--bronze);
+    letter-spacing:4px;
     text-transform:uppercase;
-
-    color:#b89b71;
-
+    font-size:.8rem;
+    margin-bottom:25px;
 }
-
-.editorial h2{
-
+.editorial-section h2{
     font-family:'Cormorant Garamond',serif;
-
-    font-size:clamp(4rem,6vw,6.8rem);
-
-    line-height:.92;
-
+    font-size:4.5rem;
+    line-height:1;
+    margin-bottom:40px;
+    font-weight:400;
+}
+.editorial-section p{
+    font-size:1.15rem;
+    margin-bottom:25px;
+    max-width:850px;
+}
+/* ---------------- FULL IMAGE ---------------- */
+.full-image{
+    position:relative;
+    height:90vh;
+    overflow:hidden;
+}
+.full-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.image-caption{
+    position:absolute;
+    bottom:10%;
+    left:10%;
+    color:white;
+}
+.image-caption h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:5rem;
+    line-height:1;
+    font-weight:400;
+}
+/* ---------------- PILLARS ---------------- */
+.pillars{
+    padding:120px 10%;
+    background:white;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+.pillar{
+    padding:50px;
+    background:var(--cream);
+    border-radius:24px;
+    transition:.4s;
+}
+.pillar:hover{
+    transform:translateY(-10px);
+}
+.pillar span{
+    display:block;
+    color:var(--bronze);
+    font-size:2rem;
+    margin-bottom:20px;
+    font-family:'Cormorant Garamond',serif;
+}
+.pillar h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    margin-bottom:15px;
+    font-weight:500;
+}
+/* ---------------- QUOTE ---------------- */
+.quote-section{
+    background:#111;
+    color:white;
+    padding:180px 10%;
+    text-align:center;
+}
+blockquote{
+    max-width:1000px;
+    margin:auto;
+    font-family:'Cormorant Garamond',serif;
+    font-size:4rem;
+    line-height:1.3;
     font-weight:300;
-
-    margin-bottom:4rem;
-
-    color:#191919;
-
-    letter-spacing:-1px;
-
 }
-
-.editorial .lead{
-
-    font-size:1.45rem;
-
-    line-height:2;
-
-    color:#333;
-
-    margin-bottom:3.5rem;
-
-    max-width:640px;
-
+/* ---------------- CLOSING ---------------- */
+.closing{
+    background:
+    linear-gradient(
+        180deg,
+        var(--sand),
+        white
+    );
+    text-align:center;
+    padding:180px 10%;
 }
-
-.editorial p{
-
-    font-size:1.08rem;
-
-    line-height:2.2;
-
-    color:#666;
-
-    max-width:650px;
-
-    margin-bottom:2.4rem;
-
+.closing-content{
+    max-width:900px;
+    margin:auto;
+}
+.closing h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:5rem;
+    line-height:1;
+    margin-bottom:30px;
+    font-weight:400;
+}
+.closing p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:50px;
+    font-size:1.2rem;
+}
+.closing h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:3rem;
+    margin-bottom:40px;
+    color:var(--bronze);
+}
+/* ---------------- MOBILE ---------------- */
+@media(max-width:900px){
+    .hero h1{
+        font-size:4rem;
+    }
+    .editorial-section h2{
+        font-size:3rem;
+    }
+    .image-caption h2{
+        font-size:3rem;
+    }
+    .pillars{
+        grid-template-columns:1fr;
+    }
+    blockquote{
+        font-size:2rem;
+    }
+    .closing h2{
+        font-size:3rem;
+    }
 }
