@@ -249,8 +249,6 @@ margin:auto;
 }
 /* ---------------- INTRO ---------------- */
 
-.intro{
-
 /* ========================================================= */
 /* PROLOGUE */
 /* ========================================================= */
@@ -260,6 +258,8 @@ margin:auto;
     background:#FCFBF8;
 
     padding:220px 0;
+
+    position:relative;
 
 }
 
@@ -275,7 +275,7 @@ margin:auto;
 
     display:block;
 
-    letter-spacing:6px;
+    letter-spacing:8px;
 
     text-transform:uppercase;
 
@@ -283,7 +283,7 @@ margin:auto;
 
     font-size:.72rem;
 
-    margin-bottom:40px;
+    margin-bottom:45px;
 
 }
 
@@ -291,49 +291,61 @@ margin:auto;
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:clamp(3.5rem,6vw,5.8rem);
+    font-size:clamp(3.8rem,6vw,6rem);
 
     line-height:1;
 
-    font-weight:400;
+    font-weight:300;
 
-    margin-bottom:60px;
+    color:#1d1d1d;
 
-    color:#1f1f1f;
+    margin-bottom:70px;
 
 }
 
 .intro p{
 
-    font-size:1.16rem;
+    font-size:1.18rem;
 
     line-height:2.2;
 
-    color:#575757;
+    color:#5d5d5d;
 
-    margin-bottom:42px;
+    margin-bottom:45px;
+
+}
+
+.intro img{
+
+    width:100%;
+
+    height:82vh;
+
+    object-fit:cover;
+
+    margin:90px 0;
 
 }
 
 .intro blockquote{
 
-    border:none;
+    margin:120px auto;
+
+    max-width:760px;
 
     text-align:center;
 
-    margin:120px auto;
-
-    max-width:700px;
+    border:none;
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:2.4rem;
+    font-size:2.6rem;
 
-    line-height:1.5;
-
-    color:#222;
+    line-height:1.55;
 
     font-style:italic;
+
+    color:#222;
 
 }
 
@@ -343,30 +355,27 @@ margin:auto;
 
     font-family:'Manrope',sans-serif;
 
+    font-size:.72rem;
+
     letter-spacing:5px;
 
     text-transform:uppercase;
 
-    font-size:.72rem;
-
-    color:#9b9b9b;
-
-    font-style:normal;
+    color:#999;
 
 }
 
 .intro .button{
 
-    color:#111;
+    color:#222;
 
 }
 
 .intro .button::after{
 
-    background:#111;
+    background:#222;
 
 }
-
 /* ---------------- IMAGE SECTIONS ---------------- */
 
 .image-section{
