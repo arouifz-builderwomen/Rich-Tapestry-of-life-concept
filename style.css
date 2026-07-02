@@ -52,38 +52,200 @@ margin:auto;
 /* ========================================================= */
 /* HERO */
 /* ========================================================= */
+/* ========================================================= */
+/* HERO */
+/* ========================================================= */
+
+.hero{
+
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+    background:#000;
+
+}
+
+.hero-video{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center center;
+
+    animation:heroZoom 22s ease-out forwards;
+
+    will-change:transform;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        180deg,
+        rgba(0,0,0,.05) 0%,
+        rgba(0,0,0,.18) 45%,
+        rgba(0,0,0,.45) 100%
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:0 8%;
+
+}
+
+.hero-label{
+
+    color:white;
+
+    text-transform:uppercase;
+
+    letter-spacing:8px;
+
+    font-size:.75rem;
+
+    margin-bottom:40px;
+
+    opacity:.9;
+
+    animation:heroFade 2s ease forwards;
+
+}
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(5.5rem,10vw,9rem);
+
+    font-weight:300;
+
+    line-height:.88;
+
+    letter-spacing:-2px;
+
+    color:white;
+
+    text-align:center;
+
+    max-width:900px;
+
+    text-shadow:0 20px 60px rgba(0,0,0,.35);
+
+    animation:heroTitle 2.5s ease forwards;
+
+}
 
 .hero-quote{
 
-    font-family:'Cormorant Garamond', serif;
+    font-family:'Cormorant Garamond',serif;
 
     font-size:2rem;
 
     font-style:italic;
 
-    line-height:1.6;
-
     color:rgba(255,255,255,.95);
 
-    margin-bottom:18px;
+    margin-top:45px;
 
     max-width:700px;
+
+    line-height:1.7;
+
+    animation:heroQuote 3.2s ease forwards;
 
 }
 
 .hero-author{
 
-    color:rgba(255,255,255,.75);
-
-    text-transform:uppercase;
-
-    letter-spacing:4px;
-
-    font-size:.72rem;
+    margin-top:20px;
 
     margin-bottom:60px;
 
+    color:rgba(255,255,255,.75);
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:.72rem;
+
+    animation:heroFade 4s ease forwards;
+
 }
+
+.button{
+
+    display:inline-block;
+
+    color:white;
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+    font-size:.78rem;
+
+    position:relative;
+
+    padding-bottom:18px;
+
+    animation:heroButton 4.5s ease forwards;
+
+}
+
+.button::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    bottom:0;
+
+    width:70px;
+
+    height:1px;
+
+    background:white;
+
+    transition:.5s;
+
+}
+
+.button:hover::after{
+
+    width:130px;
+
 }
 /* ---------------- INTRO ---------------- */
 
