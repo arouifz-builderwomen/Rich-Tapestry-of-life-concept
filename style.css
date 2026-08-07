@@ -150,6 +150,23 @@ body{
     margin-bottom:40px;
     font-weight:400;
 }
+/* ---------- Section Subtitle ---------- */
+
+.section-subtitle{
+    display:block;
+    margin-top:12px;
+
+    font-family:'Manrope',sans-serif;
+    font-size:.95rem;
+    font-weight:500;
+
+    letter-spacing:.22em;
+    text-transform:uppercase;
+
+    color:var(--bronze);
+
+    opacity:.95;
+}
 .editorial-section p{
     font-size:1.15rem;
     margin-bottom:25px;
